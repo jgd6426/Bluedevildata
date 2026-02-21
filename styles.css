@@ -12,7 +12,8 @@
 body {
     margin: 0;
     padding: 0 10%;
-    background: linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end));
+    /* background: linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end)); */
+    background: black;
     color: white;
     height: 100vh;
     font-family: 'Times New Roman', Times, serif;
@@ -71,9 +72,9 @@ header {
                 }
 
                 .active {
-                        color: var(--accent-color);
-                        text-decoration: underline;
-                    }
+                    color: var(--accent-color);
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -219,33 +220,41 @@ main {
 }
 
 #contact-section {
-    h2 {
-        color: var(--secondary-accent-color);
+    display: flex;
+    flex-direction: column;
+
+    .contact-title {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .contact-name {
+            color: var(--secondary-accent-color);
+            width: max-content;
+        }
     }
 
     #contact-container {
-        margin: 40px 0;
+        margin: 20px 0;
         max-width: 70%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         gap: 20px;
-        /* border-bottom: 2px solid var(--accent-color); */
-        height: auto;
+        
     }
 
     .contact-img {
-        height: 100px;
-        width: 100px;
-        /* border-radius: 50%; */
-        /* border: 3px solid var(--secondary-accent-color); */
+        height: 40px;
+        width: 40px;
     }
 
     .contact-email,
     .contact-phone {
         font-size: 18px;
-        padding: 5px 0;
-        /* border: 1px solid var(--secondary-accent-color); */
+        padding: 0px 50px;
+
         display: flex;
         align-items: center;
         width: fit-content;
@@ -253,8 +262,8 @@ main {
     }
 
     .contact-icon {
-        height: 40px;
-        width: 40px;
+        height: 25px;
+        width: 25px;
         margin-right: 10px;
     }
 }
