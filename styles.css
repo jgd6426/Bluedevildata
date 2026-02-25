@@ -12,13 +12,68 @@
 body {
     margin: 0;
     padding: 0 10%;
-    /* background: linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end)); */
-    background: black;
+    background: linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end));
+    /* background: black; */
     color: white;
     height: 100vh;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: var(--header-color);
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    padding: 8px 0 8px 28px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    text-decoration: underline;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+
+    img {
+        height: 30px;
+        width: 30px;
+        margin: 8px 15px 0 0;
+    }
+}
+
+ #download-btn {
+            border: 2px solid var(--accent-color);
+            border-radius: 40px;
+            color: var(--accent-color);
+            font-weight: 500;
+            padding: 8px 20px;
+            margin: 0 0 0 28px;
+            width: fit-content;
+        }
 
 header {
     background-color: var(--header-color);
@@ -37,63 +92,50 @@ header {
 
     #header-links {
         margin-left: auto;
+    }
+}
+
+/* Nav Media Queries */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+    .topnav.responsive {
+        position: absolute;
+        top: 0px;
+        right: 10%;
+        margin: 30px;
+        padding: 9px 33px 20px 0;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        font-size: 20px;
+        flex-direction: column;
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 40px;
+        z-index: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+ 
+    }
 
-            li {
-                list-style: none;
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0px;
+        top: 1px;
+    }
 
-                .nav-link {
-                    text-decoration: none;
-                    color: var(--text-color);
-                    font-weight: bold;
-                    padding: 8px 12px;
-                    border-radius: 4px;
-                    transition: background-color 0.3s, color 0.3s;
+    .topnav.responsive a {
+        display: flex;
+        justify-content: left;
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
-
-                    &:active {
-                        color: var(--accent-color);
-                        text-decoration: underline;
-                    }
-                }
-
-                .active {
-                    color: var(--accent-color);
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        #download-btn {
-            background-color: var(--header-color);
-            border: 2px solid var(--accent-color);
-            border-radius: 40px;
-            color: var(--accent-color);
-            padding: 10px 20px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        text-align: left;
     }
 }
 
@@ -242,7 +284,7 @@ main {
         flex-direction: column;
         justify-content: space-evenly;
         gap: 20px;
-        
+
     }
 
     .contact-img {

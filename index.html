@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Devil Data</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
@@ -15,17 +14,31 @@
         <img src="images/logo.png" alt="logo" id="logo-img">
 
         <nav id="header-links">
-            <ul>
+            <!-- <ul>
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="index.html" class="nav-link">Features</a></li>
                 <li><a href="index.html" class="nav-link">Resources</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
-            </ul>
+            </ul> -->
 
-            <!-- download button -->
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">Home</a>
+                <a href="#features">Features</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact</a>
+
+                <!-- download button -->
+                <a href="#download" id="download-btn">Download</a>
+                
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <img src="images/menu.svg" alt="">
+                </a>
+            </div>
+
+            <!-- download button
             <a href="download.html">
                 <button id="download-btn">Download</button>
-            </a>
+            </a> -->
         </nav>
     </header>
 
@@ -120,8 +133,8 @@
                 <div class="contact-profile">
                     <div class="contact-title">
                         <img src="images/manager.svg" alt="Profile Picture" class="contact-img">
-                    <h2 class="contact-name">Sandra Nichols</h2>
-                    <p class="contact-role">- Office Manager & Accounts Receivable</p>
+                        <h2 class="contact-name">Sandra Nichols</h2>
+                        <p class="contact-role">- Office Manager & Accounts Receivable</p>
                     </div>
                     <p class="contact-email">
                         <img src="images/email.svg" alt="" class="contact-icon">
@@ -139,6 +152,8 @@
             <p>&copy; Blue Devil Data</p>
         </footer>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
