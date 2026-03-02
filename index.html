@@ -14,14 +14,8 @@
         <img src="images/logo.png" alt="logo" id="logo-img">
 
         <nav id="header-links">
-            <!-- <ul>
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="index.html" class="nav-link">Features</a></li>
-                <li><a href="index.html" class="nav-link">Resources</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-            </ul> -->
-
             <div class="topnav" id="myTopnav">
+                <!-- page links -->
                 <a href="#home" class="active">Home</a>
                 <a href="#features">Features</a>
                 <a href="#resources">Resources</a>
@@ -29,50 +23,90 @@
 
                 <!-- download button -->
                 <a href="#download" id="download-btn">Download</a>
-                
+
+                <!-- hamburger icon -->
                 <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                     <img src="images/menu.svg" alt="">
                 </a>
             </div>
 
-            <!-- download button
-            <a href="download.html">
-                <button id="download-btn">Download</button>
-            </a> -->
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Welcome to <span id="highlight">Blue Devil Data</span></h2>
-            <p>A leading developer with high quality innovative solutions in fire station management software. <br>
-                <span style="font-weight: bold;">Customer satisfaction is our number one priority.</span>
-            </p>
+        <!-- intro banner-->
+        <section id="home-welcome-section">
+            <div class="welcome">
+                <h2>Welcome to <span id="highlight">Blue Devil Data</span></h2>
+                <p>A leading developer with high quality innovative solutions in fire station management software.</p>
+
+                <!-- text slideshow -->
+                 <div class="slideshow-container">
+                    <!-- text slides -->
+                    <div class="mySlides fade">
+                        <p class="slide-text">Combine all your fire station records into one easy to use program.</p>
+                    </div>
+                    <div class="mySlides fade">
+                        <p class="slide-text">Save time, money, and the frustration of record keeping.</p>
+                    </div>
+                    <div class="mySlides fade">
+                        <p class="slide-text">Configure for standalone workstations or client server applications.</p>
+                    </div>
+                 </div>
+
+                <p>Customer satisfaction is our number one priority.</p>
+            </div>
+            <div class="neris">
+                <img src="images/NERISbadge.png" alt="Neris Partner Badge" class="neris-img">
+                <p class="img-gallery-text">Blue Devil Data LLC is a certified NERIS partner meeting all V1 compliance.</p>
+            </div>
         </section>
-        <section>
+
+        <!-- features section -->
+        <section id="home-features-section">
             <div id="image-gallery">
-                <div>
-                    <img src="images/img1.png" alt="Image 1">
-                    <h3 class="img-gallery-text">Certified <br>NERIS Partner</h3>
+                <div class="img-gallery-row">
+                    <div class="card-container">
+                        <img src="images/img2.png" alt="Image 2">
+                        <div class="img-gallery-text">
+                            <h3>Incident Reporting</h3>
+                            <p>Our simple user interface makes incident reporting easy, only taking minutes to learn.
+                            </p>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <img src="images/img3.png" alt="Image 3">
+                        <div class="img-gallery-text">
+                            <h3>Inventory Management</h3>
+                            <p>Keep track of your inventory, equipment and vehicle maintenance with ease and efficiency.
+                            </p>
+                            <a href="#">Get started</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="images/img2.png" alt="Image 2">
-                    <h3 class="img-gallery-text">Incident<br> Reporting</h3>
-                </div>
-                <div>
-                    <img src="images/img3.png" alt="Image 3">
-                    <h3 class="img-gallery-text">Inventory<br> Maintenance</h3>
-                </div>
-                <div>
-                    <img src="images/img4.png" alt="Image 4">
-                    <h3 class="img-gallery-text">Membership<br> Training</h3>
-                </div>
-                <div>
-                    <img src="images/img5.png" alt="Image 5">
-                    <h3 class="img-gallery-text">Personalized<br> Reports</h3>
+                <div class="img-gallery-row">
+                    <div class="card-container">
+                        <img src="images/img4.png" alt="Image 4">
+                        <div class="img-gallery-text">
+                            <h3>Membership Training</h3>
+                            <p>Quickly manage training, OSHA, and in-house drill membership attendance records.</p>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <img src="images/img5.png" alt="Image 5">
+                        <div class="img-gallery-text">
+                            <h3>Personalized Reports</h3>
+                            <p>Generate customized detailed reports for your fire station needs.</p>
+                            <a href="#">Get started</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- about section -->
         <section id="home-about-section">
             <div id="about-blurb">
                 <p>Data Demon fire station management software is a comprehensive and powerful relational database that
@@ -95,6 +129,8 @@
                 </ul>
             </div>
         </section>
+
+        <!-- contact section -->
         <section id="contact-section">
             <h2>Contact Us</h2>
             <div id="contact-container">
