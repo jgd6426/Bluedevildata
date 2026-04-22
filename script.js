@@ -27,3 +27,12 @@ function showSlides() {
   setTimeout(showSlides, 8000); // Change text every 8 seconds
 }
 
+// on link click add active class to the link and remove it from the others
+const headerLinks = document.querySelectorAll("#header-links a");
+headerLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        headerLinks.forEach(link => link.classList.remove("active"));
+        link.classList.add("active"); 
+    });
+});
+
