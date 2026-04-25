@@ -105,7 +105,7 @@ header {
 /* Nav Media Queries */
 /* When the screen is less than 600 pixels wide, hide all links, except for "Download". Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1000px) {
-    .topnav a:not(:nth-last-child(2)) {
+    .topnav a {
         display: none;
     }
 
@@ -118,31 +118,40 @@ header {
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1000px) {
     .topnav.responsive {
-        /* position: absolute; */
-        /* top: 0px; */
-        /* right: 10%; */
-        /* margin: 30px; */
-        /* padding: 9px 33px 20px 0; */
+        position: relative;
+        top: 15px;
+        right: 0px;
+        margin-top: 80px;
         display: flex;
         flex-direction: column;
-
         z-index: 1;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         border-radius: 8px;
-
     }
 
     .topnav.responsive a.icon {
         position: absolute;
         right: 0px;
-        top: 1px;
+        top: 22px;
     }
 
     .topnav.responsive a {
-        display: flex;
-        justify-content: left;
+        float: none;
+        display: block;
+    }
 
-        text-align: left;
+    .page-links {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        width: 180px;
+    }
+
+    .page-links #download-btn {
+        background-color: transparent;
+        color: var(--text-color);
+        margin: 0;
+        padding: 8px 0 8px 28px;
     }
 }
 
@@ -417,12 +426,12 @@ Home welcome section
     }
 
     .card-container {
-        height: 200px;
+        height: 220px;
     }
 
     .img-gallery-text {
-        height: 180px;
-        width: 95%;
+        height: 220px;
+        width: auto;
     }
 
     .img-gallery-text h3 {
@@ -433,6 +442,24 @@ Home welcome section
     .img-gallery-text p,
     .img-gallery-text a {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .img-gallery-text {
+        overflow: hidden;
+    }
+
+    .img-gallery-text a {
+        font-size: 18px;
+        color: lightgrey;
+        font-weight: 500;
+        text-decoration: underline;
+
+        background-color: transparent;
+        padding: 0;
+        width: fit-content;
+        border: none;
     }
 }
 
@@ -651,9 +678,16 @@ Features Page
         max-width: none;
     }
 
-     #features-shortcuts {
-         flex-direction: column;
-     }
+    #features-shortcuts {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .feature-img-frame {
+        height: 300px;
+        width: 100%;
+    }
 }
 
 /* ***********************************
@@ -738,7 +772,7 @@ Downloads Page
     color: lightgrey;
 }
 
-#documentation{
+#documentation {
     margin-bottom: 40px;
 }
 
@@ -755,6 +789,13 @@ Downloads Page
 
 #documentation a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+    .download-links a {
+        border: none;
+        padding: 0;
+    }
 }
 
 /* ***********************************
