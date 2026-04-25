@@ -147,9 +147,18 @@ header {
         width: 180px;
     }
 
-    .page-links #download-btn {
+    #download-btn {
         background-color: transparent;
         color: var(--text-color);
+        margin: 0;
+        padding: 8px 0 8px 28px;
+    }
+
+    #download-btn.active {
+        background-color: transparent;
+        color: var(--accent-color);
+        text-decoration: underline;
+        font-weight: bold;
         margin: 0;
         padding: 8px 0 8px 28px;
     }
