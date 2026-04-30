@@ -333,7 +333,8 @@ Home welcome section
 #image-gallery {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     gap: 30px;
     margin-top: 40px;
     position: relative;
@@ -353,8 +354,8 @@ Home welcome section
 .card-container {
     position: relative;
     width: 100%;
-    max-width: 550px;
-    height: 300px;
+    max-width: 400px;
+    height: 500px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
@@ -387,9 +388,9 @@ Home welcome section
     align-items: baseline;
     text-align: left;
 
-    height: 280px;
+    height: 480px;
     width: fit-content;
-    max-width: 530px;
+    max-width: 400px;
     padding: 0 0 20px 20px;
 
     border-radius: 8px;
