@@ -577,6 +577,7 @@ Features Page
 #download,
 #resources {
     margin: 40px 30px;
+    /* border: 1px solid hotpink; */
 }
 
 #features h2 {
@@ -601,20 +602,21 @@ Features Page
     gap: 30px;
     margin-bottom: 40px;
     align-items: center;
+    /* width: 100%; */
 }
 
 .feature-img-frame {
-    height: 400px;
-    width: 600px;
-    overflow: hidden;
-    border-radius: 8px;
+    height: auto;
+    width: 100%;
+    /* overflow: hidden; */
+    /* border-radius: 8px; */
 }
 
 .feature-img-frame img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: top left;
+    /* object-fit: cover;
+    object-position: top left; */
 }
 
 .feature {
@@ -622,10 +624,12 @@ Features Page
     flex-direction: row;
     gap: 20px;
     align-items: center;
+    /* border: 1px solid turquoise; */
+    width: 100%;
 }
 
 .feature-text {
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .feature-text h3 {
